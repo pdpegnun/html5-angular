@@ -1,13 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// Rutas
+import { app_routing } from './app.routes';
 
+
+// Componentes
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AboutComponent } from './components/about/about.component';
-import { PortfolioItemComponent } from './components/portfolio-item/portfolio-item.component';
+import { ItemComponent } from './components/item/item.component';
 
 
 @NgModule({
@@ -17,10 +21,11 @@ import { PortfolioItemComponent } from './components/portfolio-item/portfolio-it
     FooterComponent,
     PortfolioComponent,
     AboutComponent,
-    PortfolioItemComponent
+    ItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    app_routing
   ],
   providers: [],
   bootstrap: [AppComponent]
