@@ -16,7 +16,6 @@ export class ProductosService {
       this.cargandoProductos = true;
       this.http.get("https://curso-html5-angular.firebaseio.com/productos_idx.json")
             .subscribe( data =>{
-              console.log(data.json());
               // simular retardo en la carga
               setTimeout(() => {
                 this.productos = data.json();
