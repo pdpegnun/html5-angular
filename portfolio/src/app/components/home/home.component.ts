@@ -9,7 +9,7 @@ import { ProductosService } from '../../services/productos.service';
 export class HomeComponent implements OnInit {
   normalItem:any[] = [1,2,3,6,9,10,13];
   groupItem:any[] = [4,7,11,14];
-  specials:{} = {4:'rk-size-6 rk-tosize-8',
+  specials:any = {4:'rk-size-6 rk-tosize-8',
                 7:'rk-size-4 rk-tosize-8',
                 11:'rk-size-6 rk-tosize-6',
                 14:'rk-size-4 rk-tosize-6'};

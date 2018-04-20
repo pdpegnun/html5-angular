@@ -22,7 +22,11 @@ export class ProductosService {
                 this.cargandoProductos = false;  
               },1500);
               
-            })
+            });
     }
+  }
+
+  public cargarProducto(cod:string){
+    return this.http.get(`https://curso-html5-angular.firebaseio.com/productos/${cod}.json`);
   }
 }

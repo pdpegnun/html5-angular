@@ -36,21 +36,27 @@
 <ng-template #products_content>
   <section *ngIf="_ps.productos.length > 0" class="ae-container-fluid ae-container-fluid--inner loading rk-portfolio ">
     <div class="rk-portfolio__items">
+      <!-- reemplazo clase item-{{i+1}} (background-image) -->
+      <!-- [ngStyle]="{'background-image': 'url(assets/productos/' + producto.url  + '.jpg)'}" -->
       <ng-container *ngFor="let producto of _ps.productos; let i = index">
-        <a *ngIf="normalItem.indexOf(i+1) > -1;" href="portfolio-item.html" class="rk-item rk-item--flex item-{{i+1}} {{items[i]}} ">
+        <a *ngIf="normalItem.indexOf(i+1) > -1;" 
+          [ngStyle]="{'background-image': 'url(assets/productos/' + producto.url  + '.jpg)'}"
+          [routerLink]="['/item',producto.cod]" class="rk-item rk-item--flex {{items[i]}} ">
           <div class="item-meta">
             <h2>{{ producto.titulo }}</h2>
             <p>{{ producto.categoria }}</p>
           </div>
         </a>
         <div *ngIf="groupItem.indexOf(i+1) > -1;" class="rk-items-cont {{specials[i+1]}}">
-          <a href="portfolio-item.html" class="rk-item rk-item--flex item-{{i+1}} {{items[i]}} ">
+          <a [ngStyle]="{'background-image': 'url(assets/productos/' + producto.url  + '.jpg)'}"
+          [routerLink]="['/item',producto.cod]" class="rk-item rk-item--flex item-{{i+1}} {{items[i]}} ">
             <div class="item-meta">
               <h2>{{ producto.titulo }}</h2>
               <p>{{ producto.categoria }}</p>
             </div>
           </a>
-          <a href="portfolio-item.html" class="rk-item rk-item--flex item-{{i+2}} {{items[i+1]}} ">
+          <a [ngStyle]="{'background-image': 'url(assets/productos/' + _ps.productos[i+1].url  + '.jpg)'}"
+          [routerLink]="['/item',_ps.productos[i+1].cod]" class="rk-item rk-item--flex item-{{i+2}} {{items[i+1]}} ">
             <div class="item-meta">
               <h2>{{ _ps.productos[i+1].titulo }}</h2>
               <p>{{ _ps.productos[i+1].categoria }}</p>
