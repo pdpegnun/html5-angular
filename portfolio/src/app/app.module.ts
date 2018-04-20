@@ -19,6 +19,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { AboutComponent } from './components/about/about.component';
 import { ItemComponent } from './components/item/item.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HomeComponent } from './components/home/home.component';
     PortfolioComponent,
     AboutComponent,
     ItemComponent,
-    HomeComponent
+    HomeComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

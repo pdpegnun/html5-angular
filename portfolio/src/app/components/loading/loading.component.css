@@ -1,0 +1,7 @@
+/*
+  Color del Loading
+*/
+.loader svg path,
+.loader svg rect{
+  fill: black;
+}
